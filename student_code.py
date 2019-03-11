@@ -63,9 +63,10 @@ def buildFeatureStatement(tree):
     # core.findAndAssertFeaturesFOPC to do this.  Like core.findAndAttachPrepObjectsFOPC, it takes the ROOT and
     # a list of names and builds the FOPC associated with any adjectives it finds
 
-    core.findAndAssertFeaturesFOPC(root,build_list)
+    core.findAndAttachPrepObjectsFOPC(root, subject, build_list)
 
 ##### Your code to findAndAssertFeaturesFOPC here -- this takes the root and your names
-    core.findAndAssertDefinitionsFOPC(root,build_list)
+    core.findAndAssertFeaturesFOPC(root, build_list)
 
 ##### Your code to findAndAssertDefinitionsFOPC -- this takes the root and your names
+    core.findAndAssertDefinitionsFOPC(root, build_list)
